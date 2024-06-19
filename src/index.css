@@ -1,21 +1,30 @@
 *{
-  /*Active Input Border*/
-  --Linear-gradient: (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
-  
-  /*Input errors*/
-  --Red: (input errors): hsl(0, 100%, 66%);
-  
-  /*Neutral*/
-  --White: hsl(0, 0%, 100%);
-  --Light-grayish-violet: hsl(270, 3%, 87%);
-  --Dark-grayish-violet:: hsl(279, 6%, 55%);
-  --Very-dark-violet: hsl(278, 68%, 11%);
-
-  /*Font*/
-  --Font-size: 18px;
-  font-family: "Space Grotesk", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: content-box;
 }
+
+:root{
+   /*Active Input Border*/
+   --Linear-gradient: hsl(249, 99%, 64%); 
+   --Linear-gradient2: hsl(278, 94%, 30%);
+   /*Input errors*/
+   --Red:hsl(0, 100%, 66%);
+   
+   /*Neutral*/
+   --White: hsl(0, 0%, 100%);
+   --Light-grayish-violet: hsl(270, 3%, 87%);
+   --Dark-grayish-violet: hsl(279, 6%, 55%);
+   --Very-dark-violet: hsl(278, 68%, 11%);
+ 
+   /*Font*/
+   --Font-size: 18px;
+   font-family: "Space Grotesk", sans-serif;
+   font-optical-sizing: auto;
+   font-style: normal;   
+   letter-spacing: 2px;
+}
+
+
 
 

@@ -1,0 +1,21 @@
+.card-front{
+    margin-left: 15px;
+    margin-bottom: -125px; /*mantiene la relacion con el form*/
+    position: relative;
+    z-index: 2;
+}
+
+.card-front img{
+    position: absolute; /* Se coloca por encima del form */
+    top: 50%;
+    left: 50%;
+    transform: translate(-69%, 62%); /* Centra la imagen en el contenedor */
+}
+
+.card-front-content{
+    top: 8rem;
+    position: relative;
+    text-align: center;
+    font-size: 12px;
+    right: 50px;
+}
