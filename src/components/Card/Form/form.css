@@ -33,6 +33,7 @@ form button{
     color: white;
     font-size: 20px;
     font-family: "Space Grotesk", sans-serif;;
+
 }
 
 form input::-webkit-input-placeholder { /* Chrome, Safari, Opera */

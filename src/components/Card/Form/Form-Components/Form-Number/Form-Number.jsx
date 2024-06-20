@@ -1,20 +1,27 @@
 import './form-number.css';
 
-const FormNumber = () => {
+const FormNumber = ({handleEventChange}) => {
+
+    const setValues = (e) => {
+        const newName = e.target.name;
+        const newValue = e.target.value;
+        handleEventChange({name: newName, value: newValue})
+    }
+
     return (
         <div className="form-number">
             <div className="date">
                 <label htmlFor="">EXP.DATE (MM/YY)</label>
                 <div className="date-input">
-                    <input placeholder='MM'></input>
-                    <input placeholder='YY'></input>
+                    <input placeholder='MM' type='number'  name='day' onChange={setValues}></input>
+                    <input placeholder='YY' type='number' name='year' onChange={setValues}></input>
                 </div>
 
             </div>
             <div className="cvc">
                 <label htmlFor="">CVC</label>
                 <div className="cvc-input">
-                    <input placeholder="e.g 123"type="number" name="" id="" />
+                    <input placeholder="e.g 123"type="number" name="cvc" id="" onChange={setValues}/>
                 </div>
             </div>
         </div>
