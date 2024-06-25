@@ -32,7 +32,7 @@
 }
 
 .card-front-content-dates .card-number{
-    font-size: 1.5em;
+    font-size: 1.1em;
     margin-bottom: 0.5rem;
     font-weight: 400;
 }
@@ -60,7 +60,8 @@
 
 
 @media (min-width: 700px) {
-    /* .card-front img{
-        top: 8.2rem;
-    } */
+    .card-front{
+        transform: translate(-60%, -80%);
+        font-size: 1.6em;
+    }
 }

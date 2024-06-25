@@ -17,3 +17,13 @@
 .card-back img{
    max-width: 17rem;
 }
+
+@media (min-width: 700px) {
+    .card-back{
+        transform: translate(-40%, 30%);
+    }
+
+    .card-back p{
+        font-size: 1em;
+    }
+}

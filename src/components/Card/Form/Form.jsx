@@ -5,27 +5,54 @@ import './form.css'
 const FormGeneral = ({clickButton,setInformation}) => {
 
     const [dates,setDates] = useState('')
+    const [value,setValue] = useState(false)
 
     const handleEventChange = ({name,value}) => {
         setDates({
             ...dates,
                 [name] : value,
         })
-        setInformation(dates)
     }
     const preventEvent = (e) => {
-
         e.preventDefault()
+        comprobarCampos()
+        if(value == false) {
+         clickButton(false)
+        } else {
+         clickButton(true)
+         setInformation(dates)
+        }
+    }
+
+    const comprobarCampos = () => {
+        if(dates.name.length < 3) {
+            dates.name == "e.g Jane Applessed"
+            alert("Nombre muy corto")
+            setValue(false)
+            return;
+        } else {
+            setValue(true)
+        }
+    
+        if(dates.number.length < 4) {
+            dates.number == "e.g 1234 5678 9123 0000"
+            alert("Numero corto")
+            setValue(false)
+            return;
+        } else {
+            setValue(true)
+        } 
+
     }
 
     const setClicked = () => {
-       clickButton()
+        preventEvent()
     }
     
 
 
     return (
-        <form onSubmit={preventEvent}>
+        <form onSubmit={preventEvent} >
             <FormDate
             label="cardholder Name"
             type="text"
@@ -47,8 +74,10 @@ const FormGeneral = ({clickButton,setInformation}) => {
             
             handleEventChange={handleEventChange}
             />
-
-            <button onClick={setClicked}>Confirm</button>
+            <div className="form-button">
+                <button onClick={setClicked}>Confirm</button>   
+            </div>
+            
 
         </form>
     )

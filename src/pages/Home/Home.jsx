@@ -22,11 +22,11 @@ const Home = () =>  {
 
     return (
         <div className="home">
-            <div className="cards-home">
-                <CardViews datesInfo={datesInfo} isClicked={isClicked}/>
-            </div>
-            <div className="form-general">
-                <FormGeneral clickButton={clickButton} setInformation={setInformation}/>
+            <div className="home-cards">
+            <CardViews datesInfo={datesInfo} isClicked={isClicked}/>
+            
+            
+            <FormGeneral clickButton={clickButton} setInformation={setInformation}/>
             </div>
         </div>
     )

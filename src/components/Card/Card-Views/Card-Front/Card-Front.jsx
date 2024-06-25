@@ -8,7 +8,7 @@ const CardFront = ({datesInfo,isClicked}) => {
             <img srcSet={img}></img>
             <img className="card-logo"srcSet={imgLogo}></img>
             <div className='card-front-content-dates'>
-                <h1 className='card-number'>{  isClicked  ? datesInfo.number : "000 000 000 000" }</h1>
+                <h1 className='card-number'>{  isClicked  ? datesInfo.number : "0000 0000 0000 0000" }</h1>
                 <div className="card-front-content-dates-bottom">
                 <h1 className='card-name'>{ isClicked ? datesInfo.name : "Jane Appleseed"}</h1>
                     <p className='card-date'>

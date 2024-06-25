@@ -3,7 +3,7 @@ form{
     position: absolute;
     z-index: 1;
     top:12.5rem;
-    max-width: 1000px;
+    max-width: 1440px;
     width: 100%;
     height: 77vh;  
     text-align: left;
@@ -22,11 +22,21 @@ form input{
     border: 1px solid gray;
     margin-top: 10px;
     width: 100%;
+    font-size: 20px;
+    color: var(--Dark-grayish-violet);
 }
 
-form button{
+form input:hover{
+    border: 1px solid var(--Linear-gradient);
+}
+
+form .form-button{
+    max-width: 320px;
+    width: 100%;
+}
+
+form .form-button button{
     padding: 20px;
-    max-width: 280px;
     width: 100%;
     margin: 10px auto;
     border-radius: 10px;
@@ -38,6 +48,7 @@ form button{
 
 }
 
+
 form input::-webkit-input-placeholder { /* Chrome, Safari, Opera */
     color: var(--Dark-grayish-violet);
     font-size: 20px;
@@ -45,7 +56,6 @@ form input::-webkit-input-placeholder { /* Chrome, Safari, Opera */
     font-optical-sizing: auto;
     font-style: normal;   
     letter-spacing: 0.2px;
-
 }
 
 form label{
@@ -56,8 +66,15 @@ form label{
 
 @media (min-width: 700px) {
     form{
-        top:10.5rem;
-        margin:  auto;
-        left: 25%
+        top: 5rem;
+        max-width: 55%;
+        height: 70%;
+        left: 40%;
+        
+    }
+
+    form .form-button{
+        max-width: 320px;
+        width: 100%;
     }
 }

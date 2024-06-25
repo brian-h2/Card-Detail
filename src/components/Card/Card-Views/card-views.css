@@ -4,15 +4,17 @@
     z-index: 3000;
 }
 
-
-
-
 @media (min-width: 700px) {
-    /* .cards{
-        display: flex;
-        flex-direction: row;
+    .cards{
+       padding-top: 40rem;
+       padding-left: 45rem;
+       margin: auto;
        
-    } */
+    }
+
+    .cards img{
+        max-width: 25rem;
+    }
 }
 
 

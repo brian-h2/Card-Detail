@@ -1,13 +1,16 @@
 .home{
     max-width: 1440px; 
     min-height: 100vh;
+    margin: auto;
 }
+
+
 
 @media (min-width: 700px) {
     .home{
         display: flex;
         flex-direction: row;
-    
+        
     }
 }
 

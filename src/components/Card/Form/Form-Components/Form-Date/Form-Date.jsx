@@ -21,6 +21,7 @@ const FormDate = ({label,name,type,className,placeHolder,handleEventChange}) => 
                     name={name}
                     type={type} 
                     onChange={setValues}
+                    required="required"
                     >
                     </input>
                 </div>
