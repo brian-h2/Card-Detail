@@ -1,10 +1,19 @@
 .card-back{
-    position: relative;
-    z-index: 2;
-}
-.card-back img{
-    position: absolute; /* Se coloca por encima del form */
+    position: absolute; 
     top: 50%;
     left: 50%;
-    transform: translate(-35%, 2%)
+    transform: translate(-40%, -50%);
+   
+}
+
+.card-back p{
+    position: absolute;
+    top: 49%;
+    right: 12%;
+    transform: translateY(-50%);
+    font-size: 0.7em;
+}
+
+.card-back img{
+   max-width: 17rem;
 }

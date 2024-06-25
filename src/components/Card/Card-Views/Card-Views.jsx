@@ -3,13 +3,18 @@ import CardFront from "./Card-Front/Card-Front"
 import './card-views.css'
 const CardViews = ({datesInfo,isClicked}) => {
 
+    
 
     return (
         <div className="cards">
-             <CardBack datesInfo={datesInfo}/>
-             <CardFront datesInfo={datesInfo}/>
+            <div className="cards-back">
+                <CardBack isClicked={isClicked} datesInfo={datesInfo}/>
+            </div>
+            <div className="cards-front">
+                <CardFront isClicked={isClicked} datesInfo={datesInfo}/>
+            </div>
+             
         </div>
-           
         
     )
 }

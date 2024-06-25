@@ -1,15 +1,22 @@
 import './card-front.css'
 import img from '../../../../assets/images/bg-card-front.png'
+import imgLogo from '../../../../assets/images/card-logo.svg'
 
-const CardFront = ({datesInfo}) => {
+const CardFront = ({datesInfo,isClicked}) => {
     return (
         <div className="card-front">
-            <img src={img}></img>
-            <div className="card-front-content">
-                <h1>{datesInfo.number}</h1>
-                <div className='card-front-conten-dates'>
-                    <h2>Felicia Leire</h2>
-                    <h2>09/26</h2>
+            <img srcSet={img}></img>
+            <img className="card-logo"srcSet={imgLogo}></img>
+            <div className='card-front-content-dates'>
+                <h1 className='card-number'>{  isClicked  ? datesInfo.number : "000 000 000 000" }</h1>
+                <div className="card-front-content-dates-bottom">
+                <h1 className='card-name'>{ isClicked ? datesInfo.name : "Jane Appleseed"}</h1>
+                    <p className='card-date'>
+                        <span>{ isClicked ? datesInfo.month : "00"}</span>
+                        /
+                        <span>{ isClicked ? datesInfo.year : "00"}</span>
+                    </p>
+                 
                 </div>
             </div>
         </div>
@@ -17,6 +24,3 @@ const CardFront = ({datesInfo}) => {
 }
 
 export default CardFront;
-
-//Definir el renderizado condicional cuando sea true, muestre los datos en la card
-//Terminar de pasar los datos a las etiquetas html

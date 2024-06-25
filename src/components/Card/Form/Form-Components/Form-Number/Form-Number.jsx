@@ -13,7 +13,7 @@ const FormNumber = ({handleEventChange}) => {
             <div className="date">
                 <label htmlFor="">EXP.DATE (MM/YY)</label>
                 <div className="date-input">
-                    <input placeholder='MM' type='number'  name='day' onChange={setValues}></input>
+                    <input placeholder='MM' type='number'  name='month' onChange={setValues}></input>
                     <input placeholder='YY' type='number' name='year' onChange={setValues}></input>
                 </div>
 

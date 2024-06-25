@@ -13,14 +13,15 @@ const FormGeneral = ({clickButton,setInformation}) => {
         })
         setInformation(dates)
     }
-
     const preventEvent = (e) => {
+
         e.preventDefault()
     }
 
     const setClicked = () => {
-        clickButton()
+       clickButton()
     }
+    
 
 
     return (

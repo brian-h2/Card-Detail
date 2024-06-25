@@ -1,18 +1,19 @@
 form{
     background-color: white;
-    position: relative;
+    position: absolute;
     z-index: 1;
-    top:13.5rem;
-    max-width: 1200px;
+    top:12.5rem;
+    max-width: 1000px;
     width: 100%;
-    height: 70vh;
-    padding-top: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
+    height: 77vh;  
     text-align: left;
     gap: 20px;
     text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 form input{
@@ -20,6 +21,7 @@ form input{
     border-radius: 10px;
     border: 1px solid gray;
     margin-top: 10px;
+    width: 100%;
 }
 
 form button{
@@ -50,4 +52,12 @@ form label{
     font-size: 15px;
     color: var(--Very-dark-violet);
     font-weight: 600;
+}
+
+@media (min-width: 700px) {
+    form{
+        top:10.5rem;
+        margin:  auto;
+        left: 25%
+    }
 }

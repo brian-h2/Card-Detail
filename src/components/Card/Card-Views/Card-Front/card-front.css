@@ -1,21 +1,66 @@
 .card-front{
-    margin-left: 15px;
-    margin-bottom: -125px; /*mantiene la relacion con el form*/
-    position: relative;
-    z-index: 2;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, 7%);
 }
 
 .card-front img{
-    position: absolute; /* Se coloca por encima del form */
-    top: 50%;
-    left: 50%;
-    transform: translate(-69%, 62%); /* Centra la imagen en el contenedor */
+    max-width: 17rem;
 }
 
-.card-front-content{
-    top: 8rem;
-    position: relative;
-    text-align: center;
-    font-size: 12px;
-    right: 50px;
+.card-front .card-logo{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 20%;
+}
+
+.card-front-content-dates{
+    position: absolute;
+    left: -15px;
+    bottom: 0;
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    color: var(--White)
+   
+}
+
+.card-front-content-dates .card-number{
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.card-front-content-dates-bottom {
+    display: flex;
+    gap: 90px;
+    justify-content: center;
+    width: 100%;
+    font-weight: 400;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.card-front-content-dates-bottom .card-name{
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.card-front-content-dates-bottom .card-date{
+    font-size: 0.7em;
+}
+
+
+
+@media (min-width: 700px) {
+    /* .card-front img{
+        top: 8.2rem;
+    } */
 }
