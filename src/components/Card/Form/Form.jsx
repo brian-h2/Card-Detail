@@ -4,7 +4,7 @@ import FormNumber from "./Form-Components/Form-Number/Form-Number";
 import './form.css'
 const FormGeneral = ({clickButton,setInformation}) => {
 
-    const [dates,setDates] = useState('')
+    const [dates,setDates] = useState()
     const [value,setValue] = useState(false)
 
     const handleEventChange = ({name,value}) => {
@@ -13,46 +13,27 @@ const FormGeneral = ({clickButton,setInformation}) => {
                 [name] : value,
         })
     }
-    const preventEvent = (e) => {
-        e.preventDefault()
-        comprobarCampos()
-        if(value == false) {
-         clickButton(false)
-        } else {
-         clickButton(true)
-         setInformation(dates)
-        }
-    }
 
     const comprobarCampos = () => {
-        if(dates.name.length < 3) {
-            dates.name == "e.g Jane Applessed"
-            alert("Nombre muy corto")
+        if(dates.name.length < 3 || dates.number.length < 5 || dates.month.length > 2 || dates.year.length > 4) {
+            alert("Verifique los datos")
             setValue(false)
-            return;
         } else {
-            setValue(true)
-        }
-    
-        if(dates.number.length < 4) {
-            dates.number == "e.g 1234 5678 9123 0000"
-            alert("Numero corto")
-            setValue(false)
-            return;
-        } else {
-            setValue(true)
+            setValue(true);
+            setInformation(dates)
+            clickButton(true)
         } 
-
     }
 
-    const setClicked = () => {
-        preventEvent()
+    const setClicked = (e) => {
+        e.preventDefault()
+        comprobarCampos()
     }
     
 
 
     return (
-        <form onSubmit={preventEvent} >
+        <form >
             <FormDate
             label="cardholder Name"
             type="text"

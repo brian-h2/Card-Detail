@@ -48,6 +48,10 @@ form .form-button button{
 
 }
 
+form .form-button button:hover{
+    cursor: pointer;
+}
+
 
 form input::-webkit-input-placeholder { /* Chrome, Safari, Opera */
     color: var(--Dark-grayish-violet);
