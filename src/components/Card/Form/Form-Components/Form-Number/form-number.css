@@ -1,7 +1,7 @@
 .form-number{
     display: flex;
     flex-direction: row;
-    padding-left: 25px;
+    padding-left: 15px;
     align-items: center;
 }
 
@@ -11,8 +11,12 @@
     width: 40px;
 }
 
+.form-number .date .date-input .date-year{
+    width: 60px;
+}
+
 .form-number .cvc-input input{
-    width: 127px;
+    width: 100px;
 }
 
 

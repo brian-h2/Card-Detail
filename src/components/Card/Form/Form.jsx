@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FormDate from "./Form-Components/Form-Date/Form-Date";
 import FormNumber from "./Form-Components/Form-Number/Form-Number";
+import FormComplete from "./Form-Components/Form-Complete/FormComplete"
 import './form.css'
 const FormGeneral = ({clickButton,setInformation}) => {
 
@@ -15,7 +16,7 @@ const FormGeneral = ({clickButton,setInformation}) => {
     }
 
     const comprobarCampos = () => {
-        if(dates.name.length < 3 || dates.number.length < 5 || dates.month.length > 2 || dates.year.length > 4) {
+        if(dates.name.length < 3 || dates.number.length < 5 || dates.month.length < 1 || dates.year.length < 1 || dates.cvc.value < 100) {
             alert("Verifique los datos")
             setValue(false)
         } else {
@@ -29,7 +30,8 @@ const FormGeneral = ({clickButton,setInformation}) => {
         e.preventDefault()
         comprobarCampos()
     }
-    
+
+  
 
 
     return (
@@ -59,7 +61,7 @@ const FormGeneral = ({clickButton,setInformation}) => {
                 <button onClick={setClicked}>Confirm</button>   
             </div>
             
-
+            
         </form>
     )
 }
